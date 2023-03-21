@@ -21,6 +21,7 @@
     margin: 0;
     box-sizing: border-box;
       font-family: pitagon-reg;
+      
     }
     
     .sec-1{
@@ -246,36 +247,36 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: black solid 2px;
+    border:  rgb(65, 68, 71); solid 2px;
     border-radius: 0px 10px 10px 0px ;
      padding: 5px;
      width: 20%;
-     background-color: rgb(5, 5, 5);
+     background-color: rgb(65, 68, 71);
      cursor: pointer;
-     opacity: .7;
+     /* opacity: .7; */
  
    }
 
    .search-bar-2:hover{
-         /* transform: scale(1.10); */
-        opacity: 1;
+        background-color: black;
         }
 
    .add{
     margin-top: 5px;
     float:inline-end;
     cursor: pointer;
-    opacity: .7;
+    color : rgb(65, 68, 71);
+    /* opacity: .7; */
 }
 
 .add:hover{
-    opacity: 1;
+    color: black;
 }
 
-#prod-form{
+#prod-form, #supplier-form, #cat-form, #order-form{
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 110vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,15 +286,68 @@
     display: none;
     transition: all ease-in-out 500ms;
     /* background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
+     backdrop-filter: blur(7px); 
+    
+    
 }
 
 .form{
     display: flex;
     flex-direction: column;
-    /* align-items: ; */
+    align-items: center;
     gap: 1rem;
     background-color: rgba(0, 0, 0, 0.71);
     /* width: 50%; */
-    padding: 5%;
+    padding: 5% 5% 3% 5%;
     border-radius: 12px;
 }
+
+.input-type{
+    width: 250px;
+    height: 40px;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 4%;
+    margin: 1%;
+    font-weight: bold;
+    background-color: #c2c1c1;
+}
+
+.input-type:focus{
+    box-shadow: 0 0 5px 3px rgb(152, 152, 152);
+    background-color: white;
+}
+
+option:hover {
+    background-color: yellow;
+  }
+
+  .submit-btn{
+    margin-top: 15%;
+    padding: 4% 7%;
+    border-radius: 10px;
+    font-weight: bolder;
+  }
+
+  .submit-btn:hover{
+    opacity: 0.5   ;
+    transition: all ease-in-out 500ms;
+    transform: scale(1.05);
+  }
+
+  .close{
+    padding: 12px 15px;
+    border: solid black 2px;
+    border-radius: 10px;
+    font-size:smaller;
+    font-weight:bolder;
+    /* background-color: #88888886; */
+    background-color: rgba(0, 0, 0, 0.71);
+    color: rgb(124, 124, 124);
+    margin-bottom: -25px;
+  }
+
+  .close:hover{
+    color: white;
+  }
+  

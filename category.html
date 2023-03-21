@@ -12,6 +12,22 @@
         <link rel="stylesheet" href="table.css">
     </head>
     <body>
+
+        <div id="cat-form">
+            <button class="close" id="close">
+                X
+            </button>
+            <form action="" class="form">
+
+                <input type="text" class="input-type" name="cat_name" id="cat_name" placeholder="Category Name" >
+                
+                <button class="submit-btn">
+                    Add
+                </button>
+            </form>
+            
+        </div>
+
         <section>   
 
                 <div class="main-row">
@@ -71,24 +87,24 @@
                                 </ul>
                             </nav>
 
-<div class="search-bar-outer">
+                            <div class="search-bar-outer">
     
-       <div class="search-bar">
-           
-                <input type="text" class="search-bar-1">
-            <div class="search-bar-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                  </svg>
-            </div>
-        </div>
-
-        <div class="add">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
-              </svg>
-        </div>
-    </div>
+                                <div class="search-bar">
+                                    
+                                     <input type="text" class="search-bar-1" placeholder="Search">
+                                     <div class="search-bar-2">
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                           </svg>
+                                     </div>
+                                 </div>
+                         
+                                 <div class="add" id="addBtn">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                                         <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
+                                       </svg>
+                                 </div>
+                             </div>
                             
 <table id="customers">
     <tr>
@@ -139,5 +155,6 @@
                     </div>
                 </div>
             </section>
+            <script src="./forms.js"></script>
     </body>
 </html>

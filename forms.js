@@ -1,4 +1,7 @@
 var forms = document.querySelector('#prod-form');
+var forms = document.querySelector('#supplier-form');
+var forms = document.querySelector('#cat-form');
+var forms = document.querySelector('#order-form');
 var addBtn = document.querySelector('#addBtn');
 
 console.log('Hello');
