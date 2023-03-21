@@ -1,0 +1,145 @@
+@font-face {
+    font-family: Ricordi-regular;
+    /* src: url(Fonts/Navbar-side-footer/TT\Ricordi\Greto\Trial\Regular.ttf); */
+    src: url(Fonts/Navbar-side-footer/TT-Ricordi-Greto-Trial-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Ricordi-bold;
+    /* src: url(Fonts/Navbar-side-footer/TT\ Ricordi\ Greto\ Trial\ Medium.ttf); */
+    /* src: url(Fonts\Navbar-side-footer\TT Ricordi Greto Trial Medium.ttf); */
+    src: url(Fonts/Navbar-side-footer/TT-Recordi-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: pitagon-reg;
+    src: url(Fonts//Table/fonts/ttf/PitagonSansText-Regular.ttf);
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+      font-family: pitagon-reg;
+    }
+    
+    .sec-1{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2rem;
+        padding-top: 3%;
+
+        flex-direction: column;
+        /* padding: 20px; */
+        /* background-color: #44454b; */
+        background-color: rgb(65, 68, 71);
+        width: 40vh;
+        /* position: fixed; */
+        height: 100vh;
+    }
+    
+    .div-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        padding: 10px;
+        border-radius: 20px;
+        width: 200px;
+        background-color: white;
+        margin-bottom: 60px;
+    }
+    
+    .link{
+        /* font-family: Ricordi-bold; */
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        /* border: 2px solid white; */
+        padding: 5px;
+    }
+    
+    .link-text a{
+        font-family: Ricordi-regular;
+        font-weight: lighter;
+        color: #BAD7E9;
+    }
+
+    .link-text a:hover{
+        /* opacity: .5; */
+        color: white;
+    }
+    
+    a{
+        color: currentColor;
+        text-decoration: none;
+
+    }
+
+    .main-row{
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav{
+        height: 10vh;
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 4rem; */
+    }
+
+    .logo{
+        color: rgb(65, 68, 71);
+        font-size: 1.6rem;
+        font-family: Ricordi-regular;
+
+    }
+    .card{
+        transition: all ease-in-out 500ms;
+        border: 1px solid black;
+        padding: 4rem;
+        border-radius: 24px;
+        box-shadow: 5px 10px 20px #888888;
+    }
+
+    .number-dash{
+        font-size: 3rem;
+    }
+
+    .card:hover{
+        transform: scale(1.05);
+    }
+
+    .dashboard{
+        padding: 5%;
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    ul{
+        list-style: none;
+        display: flex; 
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .link-text a.nav-link{
+        color: black;
+        transition: all ease-in-out 500ms;
+    }
+
+    .link-text a.nav-link:hover{
+        color: #EB455F;
+    }
