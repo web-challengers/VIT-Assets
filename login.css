@@ -26,7 +26,8 @@ main{
 }
 
 main #login-container{
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
+    margin-top: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +38,8 @@ main #login-container{
     width: fit-content;
     padding: 5%;
     /* border: 2px solid black; */
-    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+    box-shadow: 0 5px 5px rgba(145, 145, 145, 0.326), 0 15px 40px rgba(31, 31, 31, 0.573);
+    /* box-shadow: 0 5px 10px #0d2747, 0 15px 40px #68acff; */
 }
 
 input{
@@ -49,7 +51,8 @@ input{
 
 input:focus{
     outline: none;
-    border-bottom: 2px solid var(--btn);
+    /* border-bottom: 2px solid var(--btn); */
+    border-bottom: 2px solid #2d6ab6;
 }
 
 .signup-btn{
