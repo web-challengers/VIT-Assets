@@ -143,7 +143,10 @@
 
     .update-btn:hover{
       
-        transform: scale(1.06);
+        transform: scale(1);
+         background-color: rgb(54, 54, 117);
+        border-radius: 15px;
+        color: white;
     }
 
     .delete-btn{
@@ -154,7 +157,10 @@
     }
 
     .delete-btn:hover{
-        transform: scale(1.06);
+        transform: scale(1);
+        background-color: #820719c7;
+        border-radius: 15px;
+        color: white;
     }
 
     ul{
