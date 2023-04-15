@@ -11,6 +11,24 @@
             <link rel="stylesheet" href="home.css">
         </head>
         <body>
+        <?php
+                    session_start();
+                    if(!isset($_SESSION['name'])){
+                        echo "Hello";
+                        header("Location: ./login.php");
+                    }
+
+                    $conn = mysqli_connect("localhost", "root", "", "college_inv")
+                    or die("Connection Error!!");
+
+                    // Counts Of Data
+
+                    $tables = array("products","category","orders","supplier");
+                    $counts = array();
+                    foreach ($tables as $table) {
+                        array_push($counts, mysqli_num_rows(mysqli_query($conn,"SELECT * FROM $table")));
+                    }
+            ?>
             <section>   
 
                     <div class="main-row">
@@ -73,7 +91,7 @@
                                 <div class="dashboard">
                                     <a href="" class="card">
                                             <h1 class="number-dash">
-                                                21
+                                            <?php echo $counts[0] ?>
                                             </h1>
                                             <h2 class="name-dash">
                                                 Products
@@ -82,7 +100,7 @@
 
                                     <a href="" class="card">
                                         <h1 class="number-dash">
-                                            13
+                                        <?php echo $counts[1] ?>
                                         </h1>
                                         <h2 class="name-dash">
                                             Categories
@@ -91,7 +109,7 @@
 
                                 <a href="" class="card">
                                     <h1 class="number-dash">
-                                        106
+                                    <?php echo $counts[2] ?>
                                     </h1>
                                     <h2 class="name-dash">
                                         Orders
@@ -100,7 +118,7 @@
 
                             <a href="" class="card">
                                 <h1 class="number-dash">
-                                    5
+                                <?php echo $counts[3] ?>
                                 </h1>
                                 <h2 class="name-dash">
                                     Suppliers
@@ -112,3 +130,7 @@
                 </section>
         </body>
     </html>
+   
+    <?php
+        mysqli_close($conn);
+?>

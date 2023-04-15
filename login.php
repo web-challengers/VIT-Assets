@@ -1,3 +1,20 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['name'])){
+            header("Location: ./home.php");
+    }else{
+    if(isset($_POST['submit'])){
+        if($_POST['password']=="Group5" && $_POST['email'] =='admin'){
+            $_SESSION['name'] = $_POST['email'];
+            header("Location: ./home.php");
+        }else{
+            header("Location: ./login.php?error=Incorrect Password!");
+        }
+    }
+    else{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +25,15 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+<?php
+        if(isset($_GET['error'])){
+            ?>
+            <script>
+                alert("<?php echo $_GET['error'] ?>");
+            </script>
+            <?php
+        }
+    ?>
     <nav>
         <a href="">
             <h1 class="logo">
@@ -77,3 +103,8 @@
     <script src="./navbar.js"></script>
 </body>
 </html>
+
+<?php
+    }
+}
+?>
