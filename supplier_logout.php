@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!isset($_SESSION['name'])) {
+		header("Location: ./login.php");
+	}
 
 		session_start();
 		// session_unset();

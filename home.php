@@ -13,6 +13,7 @@
         <body>
         <?php
                     session_start();
+                    
                     if(!isset($_SESSION['name'])){
                         echo "Hello";
                         header("Location: ./login.php");
@@ -23,7 +24,7 @@
 
                     // Counts Of Data
 
-                    $tables = array("products","category","orders","supplier");
+                    $tables = array("products","cat","orders","supplier");
                     $counts = array();
                     foreach ($tables as $table) {
                         array_push($counts, mysqli_num_rows(mysqli_query($conn,"SELECT * FROM $table")));
@@ -40,25 +41,25 @@
                             </div>
 
                             <div class="link"><h3 class="link-text">
-                                <a href="#">
+                                <a href="./products.php">
                                 Products
                             </a>
                             </h3> </div>
                                 
                             <div class="link"><h3 class="link-text">
-                                <a href="#">
+                                <a href="./category.php">
                                 Category
                             </a>
                             </h3> </div>
                                 
                             <div class="link"><h3 class="link-text">
-                                <a href="#">
+                                <a href="./order.php">
                                 Orders
                             </a>
                             </h3> </div>
                                 
                             <div class="link"><h3 class="link-text">
-                                <a href="#">
+                                <a href="./supplier.php">
                                 Suppliers
                             </a>
                             </h3> 
@@ -68,19 +69,19 @@
                         <div class=" col-10 sec-2">
                                 <nav>
                                     <h1 class="logo">
-                                        VIT-Assets
+                                    <a href="./home.php"> VIT-Assets </a>
                                     </h1>
 
 
                                     <ul class="links">
                                         <li class="link-text">
-                                            <a href="" class="nav-link">
+                                            <a href="./abt_us.html" class="nav-link">
                                                 About Us
                                             </a>
                                         </li>
 
                                         <li class="link-text">
-                                            <a href="" class="nav-link">
+                                            <a href="./logout.php" class="nav-link">
                                                 Logout
                                             </a>
                                         </li>
@@ -98,7 +99,7 @@
                                             </h2>
                                     </a>
 
-                                    <a href="" class="card">
+                                    <a href="./category.php" class="card">
                                         <h1 class="number-dash">
                                         <?php echo $counts[1] ?>
                                         </h1>
@@ -107,7 +108,7 @@
                                         </h2>
                                 </a>
 
-                                <a href="" class="card">
+                                <a href="./order.php" class="card">
                                     <h1 class="number-dash">
                                     <?php echo $counts[2] ?>
                                     </h1>
@@ -116,7 +117,7 @@
                                     </h2>
                             </a>
 
-                            <a href="" class="card">
+                            <a href="./supplier.php" class="card">
                                 <h1 class="number-dash">
                                 <?php echo $counts[3] ?>
                                 </h1>

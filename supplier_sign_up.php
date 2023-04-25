@@ -9,20 +9,42 @@
     <script src="validation.js"></script>
 </head>
 <body>
+
+    
+<?php
+        session_start();
+if (!isset($_SESSION['iid'])) {
+    echo "Hello";
+    header("Location: ./supplier_login.php");
+}
+
+              
+              if(isset($_GET['error'])){
+                    ?>
+                <script>
+                    alert('<?php echo $_GET['error'] ?>');
+                </script>
+                    <?php
+                }
+
+        
+                ?>
+      
+
     <nav>
         <a href="">
             <h1 class="logo">
-                VITAsset
+            <a href="./supplier_home.php"> VIT-Assets </a>
             </h1>
         </a>
         <ul id="links">
             <li>
-                <a href="">
+                <a href="./abt_us.html">
                     About Us
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./supplier_login.php">
                     Login
                 </a>
             </li>
@@ -41,12 +63,12 @@
 
         <ul id="mob-links">
             <li>
-                <a href="">
+                <a href="./abt_us.html">
                     About Us
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="./login.php">
                     Login
                 </a>
             </li>
@@ -63,7 +85,7 @@
                 Photo
             </div>
             <div class="right">
-                <form class="signup-form" autocomplete="off" action="">
+                <form class="signup-form" method="post" action="./sup_signup_back.php" autocomplete="off" action="">
                     <h2>Supplier Signup</h2>
                     
                     <div >
@@ -76,13 +98,8 @@
                         <div id="div_email" class="alldiv"  style="font-size:x-small; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 2% 0 -2% 2%;  "></div>                      
                     </div>
                     
-                    <div>
-                        <input type="tel" name="phone" id="phone" placeholder="Phone No." onkeyup ="null_textfield('phone')" class="form-control" required>
-                        <div id="div_phone" class="alldiv"  style="font-size:x-small; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; margin: 2% 0 -2% 2%;"></div>
-                    </div>
-
                     <input type="password" name="password" id="password" placeholder="Password" required>
-                    <input type="password" name="confirm password" id="password" placeholder="Confirm Password" required>
+                    <input type="password" name="cpassword" id="password" placeholder="Confirm Password" required>
                     
                     <button class="signup-btn form-group form-control" onclick="submit_fun()">Login</button>
                     
